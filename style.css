@@ -68,6 +68,12 @@ body {
     margin-bottom: 20px;
 }
 
+.fraseD {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
 .info p {
     font-size: 15px;
     margin: 8px 0;
@@ -237,6 +243,26 @@ body {
     border: 1px solid #ccc;
     margin-bottom: 15px;
     text-align: center;
+}
+
+.footer {
+    position: relative;
+    
+    
+}
+.footer::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+    width: 80px;
+    height: 140px;
+    background-image: url("rapunzel.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 0.9;
+    pointer-events: none;
 }
 
 
