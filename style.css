@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(180deg, #0b132b, #1c2541);
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg,#0b132b, #1c2541);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitacion {
+    position: relative;
+    max-width: 420px;   /* antes 360px */
+    width: 95%;
+    padding: 45px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    z-index: 2;
+
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.invitacion::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75); /* claro elegante */
+    z-index: -1;
+}
+
+.titulo-pequeno {
+    font-size: 14px;
+    color: #b76e79;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nombreA {
+    font-size: 14px;
+    color: #b76e79;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin: 15px 0;
+    color: #8b3a62;
+}
+
+.frase {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 15px;
+    margin: 8px 0;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #b76e79;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+.btn-musica {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #b76e79;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.btn:hover {
+    background: #8b3a62;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #555;
+}
+
+.dresscode {
+    margin-top: 5px;
+    font-style: italic;
+}
+.contador {
+    margin: 30px 0;
+}
+
+.contador h3 {
+    color: #8b3a62;
+    margin-bottom: 10px;
+}
+
+.tiempo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tiempo div {
+    background: #f6c1cc;
+    border-radius: 12px;
+    padding: 10px;
+    width: 22%;
+}
+
+.tiempo span {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    color: #8b3a62;
+}
+
+.tiempo small {
+    font-size: 11px;
+    color: #555;
+}
+.luces {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.luz {
+    position: absolute;
+    bottom: -50px;
+    background: radial-gradient(circle, #fff8c6, #f5c542, #d9a21b);
+    border-radius: 50% 50% 45% 45%;
+    opacity: 0.35; /* clave */
+    filter: blur(0.5px); /* efecto suave */
+    animation: flotar linear infinite;
+}
+
+
+@keyframes flotar {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+    }
+    to {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Para que la invitación quede encima */
+.invitacion {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 480px) {
+    .invitacion {
+        padding: 35px 20px;
+    }
+
+    .nombre {
+        font-size: 34px;
+    }
+}
+
+.confirmacion {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(0,0,0,0.2);
+}
+
+.confirmacion h3 {
+    font-family: 'Playfair Display', serif;
+    color: #8b3a62;
+    margin-bottom: 8px;
+}
+
+.confirmacion p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-confirmar {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, #b76e79, #f5a9b8);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-confirmar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.confirmacion input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+

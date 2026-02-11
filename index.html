@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="luces"></div>
+
+
+    <div class="invitacion">
+
+        <h2 class="titulo-pequeno">Estás invitado a celebrar</h2>
+        <h1 class="nombre">Mis XV Años</h1>
+        <h2 class=" nombreA">Allison Estefania Martinez Martinez</h2>
+        <p class="frase">Una noche mágica llena de sueños ✨</p>
+
+        <audio id="musica" loop>
+            <source src="musica.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio
+            </audio>
+
+        <button class="btn-musica" onclick="toggleMusica()">🎵</button>
+
+
+        <div class="info">
+            <p><strong>📅 Fecha:</strong> 02 de Enero de 2027</p>
+            <p><strong>⏰ Hora:</strong> 7:00 PM</p>
+            <p><strong>📍 Lugar:</strong> Calle de mi casa</p>
+        </div>
+
+        <a class="btn" href="https://maps.google.com" target="_blank">
+            Ver ubicación
+        </a>
+
+        <div class="footer">
+            <p>¡Te esperamos!</p>
+            <p class="dresscode">Dress code: Elegante</p>
+        </div>
+
+        <div class="contador">
+    <h3>Faltan</h3>
+    <div class="tiempo">
+        <div><span id="dias">0</span><small>Días</small></div>
+        <div><span id="horas">0</span><small>Horas</small></div>
+        <div><span id="minutos">0</span><small>Min</small></div>
+        <div><span id="segundos">0</span><small>Seg</small></div>
+    </div>
+        </div>
+        <div class="confirmacion">
+            
+
+    <h3>Confirmación de Asistencia</h3>
+    <p>Por favor confirma tu asistencia</p>
+
+    <input type="text" id="nombreInvitado" placeholder="Tu nombre">
+    <a class="btn-confirmar" onclick="confirmar()">
+        Confirmar asistencia
+    </a>
+        </div>
+
+
+    </div>
+
+
+    <script> // musica
+function toggleMusica() {
+    const musica = document.getElementById("musica");
+    if (musica.paused) {
+        musica.play();
+    } else {
+        musica.pause();
+    }
+}
+</script>
+<script> //cuenta regresiva
+const fechaEvento = new Date("Junuary 02, 2027 15:00:00").getTime();
+
+setInterval(() => {
+    const ahora = new Date().getTime();
+    const diferencia = fechaEvento - ahora;
+
+    if (diferencia < 0) return;
+
+    document.getElementById("dias").innerText =
+        Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+    document.getElementById("horas").innerText =
+        Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+
+    document.getElementById("minutos").innerText =
+        Math.floor((diferencia / (1000 * 60)) % 60);
+
+    document.getElementById("segundos").innerText =
+        Math.floor((diferencia / 1000) % 60);
+}, 1000);
+</script>
+
+<script> //animacion de luces
+const contenedorLuces = document.querySelector('.luces');
+
+function crearLuz() {
+    const luz = document.createElement('div');
+    luz.classList.add('luz');
+
+    const size = Math.random() * 18 + 12;
+    luz.style.width = size + 'px';
+    luz.style.height = size * 1.4 + 'px';
+
+    // Algunas luces pasan por el centro
+    const centro = Math.random() < 0.6;
+    luz.style.left = centro
+        ? (45 + Math.random() * 10) + 'vw'
+        : Math.random() * 100 + 'vw';
+
+    const duracion = Math.random() * 12 + 10;
+    luz.style.animationDuration = duracion + 's';
+
+    contenedorLuces.appendChild(luz);
+
+    setTimeout(() => {
+        luz.remove();
+    }, duracion * 1000);
+}
+
+setInterval(crearLuz, 700);
+</script>
+
+
+<script> //confirmar asistencia
+function confirmar() {
+    const nombre = document.getElementById("nombreInvitado").value;
+    if (nombre === "") {
+        alert("Por favor escribe tu nombre 😊");
+        return;
+    }
+    const mensaje = `Hola, soy ${nombre} y confirmo mi asistencia a los XV Años 💖`;
+    window.open(`https://wa.me/5215626090237?text=${encodeURIComponent(mensaje)}`);
+}
+</script>
+
+
+
+
+
+</body>
+</html>
