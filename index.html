@@ -110,7 +110,9 @@ function toggleMusica() {
 }
 </script>
 <script> //cuenta regresiva
-const fechaEvento = new Date(2027, 0, 2, 14, 0, 0).getTime();
+//const fechaEvento = new Date(2027, 0, 2, 14, 0, 0).getTime();
+    const fechaEvento = new Date(Date.now() + 60000).getTime();
+
 
 let intervalo = setInterval(function () {
 
@@ -231,3 +233,4 @@ function lanzarConfeti() {
 
 </body>
 </html>
+
