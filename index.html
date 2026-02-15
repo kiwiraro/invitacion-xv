@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="confeti-container"></div>
+
     <div class="luces"></div>
 
 
@@ -40,7 +42,7 @@
         </a>
              <p><strong>🌮 Recepcion</strong> calle sor juana ines</p> 
              <p><strong>⏰ Hora:</strong> 3:00 PM</p>
-              <a class="btn2" href="https://maps.google.com" target="_blank">
+              <a class="btn2" href="https://maps.app.goo.gl/up1bWNc4iKnzWdyD7" target="_blank">
             Ver ubicación
         </a>
 
@@ -70,6 +72,8 @@
         <div><span id="minutos">0</span><small>Min</small></div>
         <div><span id="segundos">0</span><small>Seg</small></div>
     </div>
+    <h2 id="granDia" class="gran-dia">🎉 ¡Hoy es el gran día! 🎉</h2>
+
         </div>
         <div class="confirmacion">
              </div>
@@ -105,13 +109,26 @@ function toggleMusica() {
 }
 </script>
 <script> //cuenta regresiva
-const fechaEvento = new Date("Junuary 02, 2027 15:00:00").getTime();
+const fechaEvento = new Date(2027, 0, 2, 14, 0, 0).getTime();
 
-setInterval(() => {
+let intervalo = setInterval(function () {
+
     const ahora = new Date().getTime();
     const diferencia = fechaEvento - ahora;
 
-    if (diferencia < 0) return;
+    if (diferencia <= 0) {
+
+    clearInterval(intervalo);
+
+    document.querySelector(".tiempo").style.display = "none";
+    document.querySelector(".contador h3").style.display = "none";
+
+    document.getElementById("granDia").style.display = "block";
+
+    lanzarConfeti(); // 🎉 EXPLOSIÓN
+
+    return;
+}
 
     document.getElementById("dias").innerText =
         Math.floor(diferencia / (1000 * 60 * 60 * 24));
@@ -169,6 +186,43 @@ function confirmar() {
     window.open(`https://wa.me/5215626090237?text=${encodeURIComponent(mensaje)}`);
 }
 </script>
+
+<script> //lanzar condeti
+function lanzarConfeti() {
+
+    const contenedor = document.querySelector(".confeti-container");
+    const colores = [
+        "#f5c542",
+        "#ff6b81",
+        "#ffd166",
+        "#ffffff",
+        "#b76e79"
+    ];
+
+    for (let i = 0; i < 120; i++) {
+
+        const confeti = document.createElement("div");
+        confeti.classList.add("confeti");
+
+        confeti.style.left = Math.random() * 100 + "vw";
+        confeti.style.backgroundColor =
+            colores[Math.floor(Math.random() * colores.length)];
+
+        confeti.style.animationDuration =
+            (Math.random() * 3 + 3) + "s";
+
+        confeti.style.width = (Math.random() * 6 + 6) + "px";
+        confeti.style.height = (Math.random() * 10 + 10) + "px";
+
+        contenedor.appendChild(confeti);
+
+        setTimeout(() => {
+            confeti.remove();
+        }, 6000);
+    }
+}
+</script>
+
 
 
 
