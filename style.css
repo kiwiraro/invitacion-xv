@@ -373,16 +373,15 @@ body {
 /* GIF DE LA INVITACIÓN */
 .gif-container {
     width: 120%;
-    margin-left: -10%;
+    margin-left: -30px;
     text-align: left;
 }
 
 .gif-container img {
     width: 120%;
-    max-width: 430px;
+    max-width: 400px;
     height: auto;
     display: block;
     margin: 0;
 }
-
 
