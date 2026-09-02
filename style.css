@@ -370,6 +370,19 @@ body {
         padding: 35px 20px;
     }
 }
+/* GIF DE LA INVITACIÓN */
+.gif-container {
+    width: 120%;
+    margin-left: -10%;
+    text-align: left;
+}
 
+.gif-container img {
+    width: 120%;
+    max-width: 430px;
+    height: auto;
+    display: block;
+    margin: 0;
+}
 
 
