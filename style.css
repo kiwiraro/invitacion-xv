@@ -384,4 +384,25 @@ body {
     display: block;
     margin: 0;
 }
+.creditos {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.creditos p {
+    margin: 0;
+}
+
+.creditos a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.creditos a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
 
