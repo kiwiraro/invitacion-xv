@@ -136,11 +136,17 @@ body {
 
 .footer {
     margin-top: 25px;
-    font-size: 14px;
+    
     color: #555;
 }
 
 .dresscode {
+    font-size: 14px;
+    margin-top: 5px;
+    font-style: italic;
+}
+.regalo {
+    font-size: 14px;
     margin-top: 5px;
     font-style: italic;
 }
@@ -273,13 +279,14 @@ body {
     
     
 }
+/* imagen de rapuncel 1*/
 .footer::after {
     content: "";
     position: absolute;
     right: -20px;
-    bottom: -10px;
-    width: 80px;
-    height: 140px;
+    bottom: 250px;
+    width: 90px;
+    height: 260px;
     background-image: url("rapunzel.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -297,9 +304,9 @@ body {
     position: absolute;
     left: -20px;
     bottom: -10px;
-    width: 80px;
+    width: 800px;
     height: 140px;
-    background-image: url("rapunzel-2.png");
+    background-image: url("rapunzel22.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom left;
@@ -337,6 +344,7 @@ body {
     overflow: hidden;
     z-index: 10;
 }
+
 
 .confeti {
     position: absolute;
@@ -379,10 +387,25 @@ body {
 
 .gif-container img {
     width: 120%;
-    max-width: 320px;
+    max-width: 350px;
     height: auto;
     display: block;
     margin: 0;
+}
+
+.gif-container2 {
+    width: 100%;
+    margin-left: -50px;
+    text-align: left;
+}
+
+.gif-container2 img {
+    width:  130%;
+    max-width: 520px;
+    height: auto;
+    display: block;
+    margin: 0;
+    text-align: left;
 }
 .creditos {
     text-align: center;
