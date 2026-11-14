@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body {
+    font-family: 'Playfair Display', serif;
     background: linear-gradient(180deg, #0b132b, #1c2541);
     margin: 0;
     padding: 0;
