@@ -35,6 +35,7 @@
             <p><strong>Mis Padres: </strong><br>Hector Martinez<br>Amelia M. Sanchez</p>
             <p><strong>Mis Padrinos: </strong><br>Alan Martinez <br>Silvia M. Aguilar</p>
             </div>
+
             <p><strong>📅 Fecha:</strong> 02 de Enero de 2027</p>
             <p><strong>📍 Ceremonia:</strong>Parroquia de Nuestra Señora de Loreto</p>
             <p><strong>⏰ Hora:</strong> 3:00 PM</p>
@@ -52,6 +53,76 @@
             
              
         </div>
+        <!-- GALERÍA DE FOTOGRAFÍAS 3D -->
+<section class="galeria-xv">
+
+  <p class="galeria-etiqueta">Nuestros recuerdos</p>
+
+  <h2>Momentos especiales</h2>
+
+  <p class="galeria-descripcion">
+    Una pequeña colección de recuerdos para compartir contigo.
+  </p>
+
+  <div class="stage" aria-label="Galería de fotografías">
+
+    <!-- Aquí van las seis caras originales del cubo -->
+    <div class="cube autoplay" id="cube">
+
+      <figure class="face front">
+        <img src="imagenes/foto1.jpg" alt="Fotografía 1">
+        <figcaption><small>Un recuerdo</small>Un día especial</figcaption>
+      </figure>
+
+      <figure class="face right">
+        <img src="imagenes/foto2.jpg" alt="Fotografía 2">
+        <figcaption><small>Un momento</small>Brilla siempre</figcaption>
+      </figure>
+
+      <figure class="face back">
+        <img src="imagenes/foto3.jpg" alt="Fotografía 3">
+        <figcaption><small>Una sonrisa</small>Momentos únicos</figcaption>
+      </figure>
+
+      <figure class="face left">
+        <img src="imagenes/foto4.jpg" alt="Fotografía 4">
+        <figcaption><small>Un sueño</small>Una nueva etapa</figcaption>
+      </figure>
+
+      <figure class="face top">
+        <img src="imagenes/foto5.jpg" alt="Fotografía 5">
+        <figcaption><small>Con cariño</small>Para recordar</figcaption>
+      </figure>
+
+      <figure class="face bottom">
+        <img src="imagenes/foto6.jpg" alt="Fotografía 6">
+        <figcaption><small>Con ilusión</small>Mis XV Años</figcaption>
+      </figure>
+
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="prev" type="button">← Anterior</button>
+    <button id="toggle" class="primary" type="button">
+      Pausar giro
+    </button>
+    <button id="next" type="button">Siguiente →</button>
+  </div>
+
+  <div class="dots">
+    <button class="dot active" data-index="0"></button>
+    <button class="dot" data-index="1"></button>
+    <button class="dot" data-index="2"></button>
+    <button class="dot" data-index="3"></button>
+  </div>
+
+  <p class="galeria-pie">
+    Gira el cubo y descubre nuestros recuerdos.
+  </p>
+
+</section>
+<!-- FIN GALERÍA -->
 
         <div class="separador">
             <p></p>
@@ -243,6 +314,8 @@ function lanzarConfeti() {
     }
 }
 </script>
+
+<script src="galeria.js"></script>
 
 </body>
 </html>
