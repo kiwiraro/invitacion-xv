@@ -5,7 +5,7 @@ const toggle = document.getElementById("toggle");
 const dots = [...document.querySelectorAll(".dot")];
 const faces = [...document.querySelectorAll(".face")];
 
-const totalFotos = 36;
+const totalFotos = 42;
 const fotosPorTurno = 6;
 const totalTurnos = totalFotos / fotosPorTurno;
 
